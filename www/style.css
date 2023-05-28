@@ -1,0 +1,133 @@
+    :root {
+      --colorFondo: #fdced2;
+      --principal: #6d6875;
+      --borde: #000000;
+      --letra: #FFFFFF;
+      --tamTitulo: 37px + 21.44px + 21.44px;
+      --tamLista: calc(100% - (var(--tamTitulo) + 64px + 15px + 2rem))
+    }
+
+    body {
+      background-color: var(--colorFondo);
+      margin: 0;
+    }
+/*
+    h1 {
+      text-align: center;
+      margin-top: 1rem;
+
+      
+      height: 4rem;
+      position: absolute;
+      top: 0;
+    }
+*/
+
+    .titulo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-height: var(--tamTitulo);
+      min-height: var(--tamTitulo);
+    }
+
+    
+    #add-task-container {
+      position: absolute;
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+      display: flex;  
+      align-items: center;
+      justify-content: space-between;
+      max-height: 64px;
+      min-height: 64px;
+      
+    }
+    
+    #fab-add {
+      -webkit-user-select: none;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background-color: var(--principal);
+      color: white;
+      border: none;
+      font-size: 1.2em;
+    }
+
+    #fab-add:active {
+      background-color: var(--principal);
+      color: var(--colorFondo);
+    }
+
+    
+    #task-name {
+      flex-grow: 1;
+      height: 64px;
+      margin-right: 0.5rem;
+    }
+
+    #lista-tareas {
+      max-height: var(--tamLista);
+      min-height: var(--tamLista);
+      padding: 1rem;
+      overflow-y: scroll;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #lista-tareas div { 
+      display: flex;
+      margin: 0.5rem auto;
+      padding: 1rem;
+      width: 80%;
+      border-radius: 5rem;
+      background-color: var(--principal);
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2em;
+      color: var(--letra);
+    }
+    
+    .desaparecer {
+      opacity: 0;
+      transition: opacity 0.5s ease-out;
+    }
+
+    #mensaje_add {
+      display: none;
+      background-color: #f97f89;
+      color: var(--letra);
+      border-radius: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      width: 90%;
+      height: 10%;
+      box-shadow: 10px 10px 0 var(--letra);
+    }
+
+    @media (min-width: 768px) {
+        #mensaje_add {
+          width: 30%;
+          height: 10%;
+        }
+    }
+
+    img {
+      width: 1em;
+      height: 1em;
+      margin-left: 1rem;
+    }
+
+
+    
